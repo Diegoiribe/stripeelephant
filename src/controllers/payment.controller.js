@@ -8,30 +8,28 @@ export const createSession = async (req, res) => {
     line_items: [
       {
         price_data: {
-          product_data: {
-            name: 'Laptop',
-            description: 'Gaming laptop'
-          },
           currency: 'usd',
-          unit_amount: 20000 // 200.00
+          product_data: {
+            name: 'TV'
+          },
+          unit_amount: 2000
         },
         quantity: 1
       },
       {
         price_data: {
-          product_data: {
-            name: 'TV',
-            description: 'Smart TV'
-          },
           currency: 'usd',
-          unit_amount: 10000 // 100.00
+          product_data: {
+            name: 'Laptop'
+          },
+          unit_amount: 2000
         },
         quantity: 1
       }
     ],
     mode: 'payment',
-    success_url: 'http://localhost:3000/success',
-    cancel_url: 'http://localhost:3000/cancel'
+    success_url: `https://www.elephantarchives.com/`,
+    cancel_url: `https://www.elephantarchives.com/shop`
   })
   return res.json(session)
 }
