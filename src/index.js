@@ -14,5 +14,9 @@ app.use(PaymentRoutes)
 
 app.use(express.static(path.resolve('src/Components/Shop/index.jsx')))
 
+app.enableCors({
+  origin: '*'
+})
+
 app.listen(PORT)
 console.log('Server running on port', PORT)
