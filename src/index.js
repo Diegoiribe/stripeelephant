@@ -6,17 +6,11 @@ import path from 'path'
 
 const app = express()
 
-app.use(cors())
+app.use(cors('https://www.elephantarchives.com/'))
 
 app.use(express.json())
 
 app.use(PaymentRoutes)
-
-app.use(express.static(path.resolve('src/Components/Shop/index.jsx')))
-
-app.enableCors({
-  origin: '*'
-})
 
 app.listen(PORT)
 console.log('Server running on port', PORT)
