@@ -12,7 +12,7 @@ export const createSession = async (req, res) => {
         shipping_rate_data: {
           type: 'fixed_amount',
           fixed_amount: {
-            amount: 20000,
+            amount: 9900,
             currency: 'mxn'
           },
           display_name: 'Envios Nacionales',
@@ -23,7 +23,7 @@ export const createSession = async (req, res) => {
             },
             maximum: {
               unit: 'business_day',
-              value: 7
+              value: 10
             }
           }
         }
@@ -39,11 +39,11 @@ export const createSession = async (req, res) => {
           delivery_estimate: {
             minimum: {
               unit: 'business_day',
-              value: 1
+              value: 10
             },
             maximum: {
               unit: 'business_day',
-              value: 3
+              value: 20
             }
           }
         }

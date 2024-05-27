@@ -6,7 +6,7 @@ import path from 'path'
 
 const app = express()
 
-app.use(cors('https://www.elephantarchives.com/'))
+app.use(cors('https://localhost:3001'))
 
 app.use(express.json())
 
